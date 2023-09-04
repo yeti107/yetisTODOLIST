@@ -1,0 +1,150 @@
+:root {
+    --darkest :#26292A ;
+    --darker : #2C3839 ;
+    --dark : #304345;
+    --gray : #5A6061 ;
+    --pink :    #C686E2;
+    --purple : #631D82 ;
+    --light : #DFDDDF ;
+    --red :   #BF2323;
+
+
+}
+
+* {
+   box-sizing: border-box;
+   margin : 0;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+body {
+    display:flex ;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--dark);
+    color: white;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+header {
+    padding: 3rem 1rem;
+    margin:0 auto;
+    max-width: 800px;
+    width: 100% ;
+    opacity: 90%;
+    font-family: fantasy;
+    
+}
+header h1 {
+    font-size : 3rem ;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: white
+    
+
+    
+}
+
+
+#new-task-form {
+ display: flex ;;
+}
+
+input, button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#new-task-input {
+    flex: 1 1 0%;
+    background-color: var(--darkest);
+    padding: 1rem;
+    border-radius: 1.3rem;
+    margin-right: 1.2rem;
+    color: var(--light);
+    font-size: 1.3rem;
+    opacity: 75%;
+}
+
+#new-task-add {
+    color: var(--light);
+    font-size: 1.3rem;
+    font-weight: 400;
+    
+    
+}
+
+main {
+    flex: 1 1 0%;
+   max-width: 800px;
+   width: 100%;
+   margin: 0 auto;
+   
+}
+
+.taskslist {
+    padding: 1.1rem;
+}
+
+.taskslist h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color : white ;
+    margin-bottom: 1rem;
+    opacity: 75%;
+}
+
+#tasks .task {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    padding: 0.8rem;
+    border-radius: 0.8rem;
+    margin-bottom: 0.8rem;
+    opacity: 75%;
+}
+
+.task .content {
+      flex: 1 1 0% ;
+}
+
+ .task .content .text {
+    color: white;
+    font-size: 1.1rem;
+    width: 100%;
+    display: block;
+    
+}
+
+.task .content .text :not(:read-only) {
+    color: var(--pink);
+}
+
+.task .actions {
+    display: flex;
+    margin: 0 -0.5rem;
+}
+.task .actions button    {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.12rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+}
+.task .actions .edit {
+    background-color: green;
+    padding: 1rem;
+    border-radius: 1rem;
+    
+}
+.task .actions .delete {
+    background-color: crimson;
+    padding: 1rem;
+    border-radius: 1rem;
+    
+}
